@@ -15,6 +15,13 @@
 
     <name>koali-wechat-miniapp</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.clover.koali</groupId>
+            <artifactId>koali-wechat-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <!--指定使用maven打包-->
     <build>
