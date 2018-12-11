@@ -6,3 +6,16 @@
 /koali-common/.settings
 /koali-wechat/*.iml
 /koali-wechat-common/target
+/koali-author/*.iml
+/koali-cache/*.iml
+/koali-common/*.iml
+/koali-common/*.project
+/koali-common/*.classpath
+/koali-devops/*.iml
+/koali-jobs/*.iml
+/koali-logs/*.iml
+/koali-mq/*.iml
+/koali-permission/*.iml
+/koali-wechat-common/*.iml
+/koali-wechat-miniapp/target
+/koali-wechat-miniapp/koali-wechat-miniapp.iml
