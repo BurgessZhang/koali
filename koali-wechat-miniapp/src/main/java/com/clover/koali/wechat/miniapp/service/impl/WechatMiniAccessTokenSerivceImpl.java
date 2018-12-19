@@ -5,8 +5,8 @@ import com.clover.koali.common.date.DateFormatUtils;
 import com.clover.koali.common.util.StringUtils;
 import com.clover.koali.wechat.common.http.HttpUtils;
 import com.clover.koali.wechat.miniapp.bean.WechatMiniToken;
-import com.clover.koali.wechat.miniapp.constant.WechatExceptionConstant;
-import com.clover.koali.wechat.miniapp.service.WechatAccessTokenSerivce;
+import com.clover.koali.wechat.miniapp.constant.WechatMiniExceptionConstant;
+import com.clover.koali.wechat.miniapp.service.WechatMiniAccessTokenSerivce;
 import com.clover.koali.wechat.miniapp.util.WechatMiniAppInfo;
 import com.clover.koali.wechat.miniapp.util.WechatMiniException;
 import org.slf4j.Logger;
@@ -23,9 +23,9 @@ import java.util.Map;
  * @time 13:49/2018-12-11
  * @desc access_token service接口 实现
  */
-public class WechatAccessTokenSerivceImpl implements WechatAccessTokenSerivce {
+public class WechatMiniAccessTokenSerivceImpl implements WechatMiniAccessTokenSerivce {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(WechatAccessTokenSerivceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(WechatMiniAccessTokenSerivceImpl.class);
 
     /**
      * @param '[appId 小程序AppId, appSecret 小程序appSecret]
@@ -40,10 +40,10 @@ public class WechatAccessTokenSerivceImpl implements WechatAccessTokenSerivce {
     public WechatMiniToken getAccessToken(String appId, String appSecret) throws WechatMiniException {
         LOGGER.debug("[class: WechatAccessTokenSerivceImpl.java]-[method: getAccessToken]-[function: {}] [参数/结果]: {}", "获取accessToken", appId, appSecret);
         if (StringUtils.isBlank(appId)) {
-            throw new WechatMiniException(WechatExceptionConstant.WECHAT_APPID_IS_NULL);
+            throw new WechatMiniException(WechatMiniExceptionConstant.WECHAT_APPID_IS_NULL);
         }
         if (StringUtils.isBlank(appSecret)) {
-            throw new WechatMiniException(WechatExceptionConstant.WECHAT_APPSECRET_IS_NULL);
+            throw new WechatMiniException(WechatMiniExceptionConstant.WECHAT_APPSECRET_IS_NULL);
         }
 
         Map<String, String> params = new HashMap<>(4);

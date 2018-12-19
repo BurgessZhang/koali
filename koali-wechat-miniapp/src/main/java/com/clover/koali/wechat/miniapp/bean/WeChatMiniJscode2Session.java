@@ -1,6 +1,11 @@
 package com.clover.koali.wechat.miniapp.bean;
 
 
+import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.SerializedName;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import java.io.Serializable;
 
 /**
@@ -11,12 +16,20 @@ import java.io.Serializable;
  * @time 14:40/2018-12-11
  * @desc
  */
-public class WeChatJscode2Session implements Serializable {
+@Data
+@EqualsAndHashCode(callSuper = false)
+public class WeChatMiniJscode2Session implements Serializable {
 
+    @SerializedName("openid")
     private String openid;
+    @SerializedName("session_key")
     private String sessionKey;
+    @SerializedName("unionid")
     private String unionid;
 
+    public static WeChatMiniJscode2Session fromJson(String json){
+        return new GsonBuilder().create().fromJson(json, WeChatMiniJscode2Session.class);
+    }
 
     @Override
     public String toString() {
@@ -25,29 +38,5 @@ public class WeChatJscode2Session implements Serializable {
                 ", sessionKey='" + sessionKey + '\'' +
                 ", unionid='" + unionid + '\'' +
                 '}';
-    }
-
-    public String getOpenid() {
-        return openid;
-    }
-
-    public void setOpenid(String openid) {
-        this.openid = openid;
-    }
-
-    public String getSessionKey() {
-        return sessionKey;
-    }
-
-    public void setSessionKey(String sessionKey) {
-        this.sessionKey = sessionKey;
-    }
-
-    public String getUnionid() {
-        return unionid;
-    }
-
-    public void setUnionid(String unionid) {
-        this.unionid = unionid;
     }
 }

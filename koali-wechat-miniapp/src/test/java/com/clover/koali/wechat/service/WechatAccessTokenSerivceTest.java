@@ -1,8 +1,8 @@
 package com.clover.koali.wechat.service;
 
 import com.clover.koali.wechat.miniapp.bean.WechatMiniToken;
-import com.clover.koali.wechat.miniapp.service.WechatAccessTokenSerivce;
-import com.clover.koali.wechat.miniapp.service.impl.WechatAccessTokenSerivceImpl;
+import com.clover.koali.wechat.miniapp.service.WechatMiniAccessTokenSerivce;
+import com.clover.koali.wechat.miniapp.service.impl.WechatMiniAccessTokenSerivceImpl;
 import com.clover.koali.wechat.miniapp.util.WechatMiniException;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -28,7 +28,7 @@ public class WechatAccessTokenSerivceTest {
 
     @Test
     public void getAccessToken(){
-        WechatAccessTokenSerivce wechatAccessTokenSerivce = new WechatAccessTokenSerivceImpl();
+        WechatMiniAccessTokenSerivce wechatAccessTokenSerivce = new WechatMiniAccessTokenSerivceImpl();
 
         WechatMiniToken wechatMiniToken = null;
         try {

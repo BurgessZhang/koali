@@ -1,6 +1,8 @@
 package com.clover.koali.wechat.miniapp.bean;
 
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -11,6 +13,7 @@ import java.io.Serializable;
  * @time 13:34/2018-12-11
  * @desc token bean信息
  */
+@Data
 public class WechatMiniToken implements Serializable {
 
     //小程序AppId
@@ -21,38 +24,6 @@ public class WechatMiniToken implements Serializable {
     private String accessToken;
     //小程序有效时间
     private Long expiresIn;
-
-    public String getAppId() {
-        return appId;
-    }
-
-    public void setAppId(String appId) {
-        this.appId = appId;
-    }
-
-    public String getAppSecret() {
-        return appSecret;
-    }
-
-    public void setAppSecret(String appSecret) {
-        this.appSecret = appSecret;
-    }
-
-    public String getAccessToken() {
-        return accessToken;
-    }
-
-    public void setAccessToken(String accessToken) {
-        this.accessToken = accessToken;
-    }
-
-    public Long getExpiresIn() {
-        return expiresIn;
-    }
-
-    public void setExpiresIn(Long expiresIn) {
-        this.expiresIn = expiresIn;
-    }
 
     @Override
     public String toString() {

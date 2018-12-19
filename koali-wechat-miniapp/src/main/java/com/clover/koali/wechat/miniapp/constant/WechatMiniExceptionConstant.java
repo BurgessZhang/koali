@@ -8,7 +8,7 @@ package com.clover.koali.wechat.miniapp.constant;
  * @time 13:59/2018-12-11
  * @desc 异常信息常量
  */
-public class WechatExceptionConstant {
+public class WechatMiniExceptionConstant {
 
 
     public static final String WECHAT_APPID_IS_NULL = "AppId为null!";

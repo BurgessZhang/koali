@@ -11,7 +11,7 @@ import com.clover.koali.wechat.miniapp.util.WechatMiniException;
  * @time 13:48/2018-12-11
  * @desc access_token service接口
  */
-public interface WechatAccessTokenSerivce {
+public interface WechatMiniAccessTokenSerivce {
 
     String GET_ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token";
 
